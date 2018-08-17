@@ -41,7 +41,7 @@ private:
 // Function declarations
 public:
     Madgwick(void);
-    void begin(float sampleFrequency) { invSampleFreq = 1.0f / sampleFrequency; }
+    void begin(float sampleFrequency, float _beta) { invSampleFreq = 1.0f / sampleFrequency; beta = _beta; }
 #ifdef GYRO_SAMPLES_IN_RADS_PER_SEC
     void update(float gRadsPerSecx, float gRadsPerSecy, float gRadsPerSecz, float ax, float ay, float az, float mx, float my, float mz);
 #else
